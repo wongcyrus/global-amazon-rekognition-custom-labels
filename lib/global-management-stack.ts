@@ -28,7 +28,7 @@ export class GlobalRekognitionCustomLabelsManagementStack extends cdk.Stack {
     // The code that defines your stack goes here
     const trainingBucket = new s3.Bucket(this, "TrainingDataBucket", {
       bucketName:
-        "globalcustomlabelsmanagement" + this.account + this.region,
+        "globalcustom-labelsmanagement" + this.account + this.region,
       autoDeleteObjects: true,
       removalPolicy: RemovalPolicy.DESTROY,
       versioned: true,
@@ -48,7 +48,7 @@ export class GlobalRekognitionCustomLabelsManagementStack extends cdk.Stack {
     };
     const outputBucket = new s3.Bucket(this, "outputBucket", {
       bucketName:
-        "globalcustomlabelsmanagement" +
+        "globalcustom-labelsmanagement" +
         this.account +
         this.region +
         "output",
